@@ -1,0 +1,41 @@
+.main {
+  min-height: 100vh;
+}
+
+.main > * {
+  min-height: inherit !important;
+}
+
+.main-page {
+
+}
+
+.sidebar {
+  padding-top: 2rem;
+  min-height: inherit !important;
+  background-color: #001414;
+  color: #305E5E;
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.intro-text {
+  text-align: center;
+  color: white;
+}
+
+.social-icons {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.social-icons .btn {
+  color: #305E5E;
+}
