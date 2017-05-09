@@ -1,0 +1,75 @@
+.sidebar {
+  position: fixed;
+  overflow-y: auto;
+  height: 100vh;
+  padding-top: 2rem;
+  background-color: #001414;
+  color: #305E5E;
+}
+
+.avatar {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.intro-text {
+  text-align: center;
+  color: #fff;
+}
+
+.social-icons {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.social-icons .btn {
+  color: #305E5E;
+  transition: color .2s linear;
+}
+
+.social-icons .btn:hover {
+  color: #adadad;
+  transition: color .2s linear;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+a.list-group-item:hover {
+  z-index: 2;
+  color: #fff;
+  background-color: #305E5E;
+  border-color: #305E5E;
+  background-image: none;
+  transition: color .2s linear, background-color .2s linear, border-color .2s linear;
+}
+
+a.list-group-item {
+  transition: color .2s linear, background-color .2s linear, border-color .2s linear;
+}
+
+.quote-box {
+  padding: 12rem 16rem;
+}
+
+.dev-icon {
+  font-size: 6rem;
+}
+
+.panel-item:hover {
+  cursor: pointer;
+  background-color: #001414;
+  color: #fff;
+  transition: background-color .2s linear, color .2s linear;
+}
+
+.panel-item {
+  transition: background-color .2s linear, color .2s linear;
+}
+
+.author {
+  text-align: right;
+  padding-right: 12rem;
+}

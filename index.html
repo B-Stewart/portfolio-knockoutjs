@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Portfolio</title>
+  <meta name="description" content="Brayden's Portfolio">
+  <meta name="author" content="Brayden Stewart">
+
+  <link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/devicons/devicon.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script src="lib/knockout-3.4.2.js"></script>
+  
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target=".sidebar">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="col-md-3 sidebar">
+        <div class="avatar">
+          <img src="assets/img/avatar.png" class="img-rounded">
+        </div>
+
+        <div class="intro-text">
+          <h3>Brayden Stewart</h3>
+          <p>Software Developer</p>
+        </div>
+
+        <div class="social-icons">
+          <div class="btn-group" role="toolbar" data-bind="foreach: socialLinks">
+              <a class="btn" data-bind="attr: { href: link }" target="_blank">
+                <i class="fa fa-lg" data-bind="css: icon" aria-hidden="true"></i>
+              </a>
+          </div>
+        </div>
+
+        <div class="list-group" data-bind="foreach: categories">
+          <a class="list-group-item" data-bind="attr: { href: '#' + reference }, text: name"></a>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div id="quote" class="col-xs-12 quote-box">
+        <h1><strong data-bind="text: quote.content"></strong></h1>
+        <hr />
+        <h1 class="author"><small data-bind="text: quote.author"></small>
+      </div>
+      <div class="col-xs-12" data-bind="foreach: categories">
+        <div class="col-xs-12" data-bind="attr: {id: reference}">
+          <h3 class="col-xs-12" data-bind="text: name"></h3>
+          <hr class="col-xs-12" />
+          <div class="col-xs-12" data-bind="foreach: projects">
+            <div class="col-md-4 panel panel-default panel-item" data-bind="click: openLink">
+              <div class="panel-body media">
+                <div class="media-left">
+                  <i class="dev-icon colored" data-bind="css: icon"></i>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading" data-bind="text: name"></h4>
+                  <div>
+                    <span class="label label-default"></span>
+                  </div>
+                  <p data-bind="text: description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
