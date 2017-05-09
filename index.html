@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="lib/devicons/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto" rel="stylesheet"> 
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -26,8 +27,8 @@
 </head>
 
 <body data-spy="scroll" data-target=".sidebar">
-  <div class="row">
-    <div class="col-md-3">
+  <div class="row row-fix">
+    <div class="col-md-3 col-xs-12 no-right">
       <div class="col-md-3 sidebar">
         <div class="avatar">
           <img src="assets/img/avatar.png" class="img-rounded">
@@ -40,7 +41,7 @@
 
         <div class="social-icons">
           <div class="btn-group" role="toolbar" data-bind="foreach: socialLinks">
-              <a class="btn" data-bind="attr: { href: link }" target="_blank">
+              <a class="btn" data-bind="attr: { href: link, title: tooltip }" target="_blank" data-toggle="tooltip">
                 <i class="fa fa-lg" data-bind="css: icon" aria-hidden="true"></i>
               </a>
           </div>
@@ -52,34 +53,40 @@
         
       </div>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 col-xs-12 main">
       <div id="quote" class="col-xs-12 quote-box">
-        <h1><strong data-bind="text: quote.content"></strong></h1>
+        <h1 class="quote"><strong data-bind="text: quote.content"></strong></h1>
         <hr />
         <h1 class="author"><small data-bind="text: quote.author"></small>
       </div>
+
+      <div class="col-xs-12 note">
+        <h3><small>All work referenced below was created by myself, or by a team that I was apart of.</small></h3>
+      </div>
+
       <div class="col-xs-12" data-bind="foreach: categories">
         <div class="col-xs-12" data-bind="attr: {id: reference}">
           <h3 class="col-xs-12" data-bind="text: name"></h3>
           <hr class="col-xs-12" />
           <div class="col-xs-12" data-bind="foreach: projects">
-            <div class="col-md-4 panel panel-default panel-item" data-bind="click: openLink">
-              <div class="panel-body media">
-                <div class="media-left">
-                  <i class="dev-icon colored" data-bind="css: icon"></i>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading" data-bind="text: name"></h4>
-                  <div>
-                    <span class="label label-default"></span>
+            <div class="col-lg-4 col-md-6">
+              <div class="panel panel-default panel-item" data-bind="click: openLink">
+                <div class="panel-body media">
+                  <div class="media-left">
+                    <i class="dev-icon colored" data-bind="css: icon"></i>
                   </div>
-                  <p data-bind="text: description"></p>
+                  <div class="media-body">
+                    <h4 class="media-heading" data-bind="text: name"></h4>
+                    <div class="label-container" data-bind="foreach: tags">
+                      <span class="label label-default" data-bind="text: $data"></span>
+                    </div>
+                    <p data-bind="text: description"></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
