@@ -70,7 +70,8 @@
           <hr class="col-xs-12" />
           <div class="col-xs-12" data-bind="foreach: projects">
             <div class="col-lg-4 col-md-6">
-              <div class="panel panel-default panel-item" data-bind="click: openLink">
+              <div class="panel panel-default panel-item absolute-link-wrapper">
+                <a data-bind="attr: { href: link }" class="absolute-link" target="_blank"></a>
                 <div class="panel-body media">
                   <div class="media-left">
                     <i class="dev-icon colored" data-bind="css: icon"></i>

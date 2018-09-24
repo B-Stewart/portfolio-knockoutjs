@@ -19,9 +19,6 @@ function Project(name, description, tags, icon, link) {
   self.tags = tags;
   self.icon = icon;
   self.link = link;
-  self.openLink = function () {
-    window.open(this.link, '_blank');
-  }
 }
 
 //Set up Category Class
@@ -54,7 +51,7 @@ function AppViewModel() {
         ["Java", "Android"], "devicon-android-plain", "https://bitbucket.org/B-Stewart/whats-for-dinner"),
 
       new Project("Kids' Vacation Countdown", "A published mobile app developed using Ionic 2. Designed to get kids excited for their vacations.",
-        ["Ionic", "Android", "iOS", "Angular.JS", "TypeScript", "SASS"], "devicon-typescript-plain", "http://www.swiftsoulinteractive.com/index.php/apps/kids-vacation-countdown"),
+        ["Ionic", "Android", "iOS", "Angular.JS", "TypeScript", "SASS"], "devicon-typescript-plain", "https://play.google.com/store/apps/details?id=com.swiftsoulinteractive.kids_countdown&hl=en_US"),
 
     ]),
 
@@ -67,8 +64,8 @@ function AppViewModel() {
       new Project("Portfolio", "The page you are viewing right now. This is a minimalistic web page to show off my projects and learn Knockout.JS",
         ["Javascript", "Knockout.JS", "HTML", "CSS", "Bootstrap"], "devicon-javascript-plain", "https://github.com/B-Stewart/portfolio-knockoutjs"),
 
-      new Project("MEAN Boilerplate", "A Mongo, Express, Angular, Node based boilerplate for future API heavy projects.",
-        ["Javascript", "MongoDB", "Express.JS", "Angular.JS", "Node.JS", "JSON", "API"], "devicon-nodejs-plain", "https://github.com/B-Stewart/portfolio-knockoutjs"),
+      new Project("David Riley Associates", "A design agency I worked with on their site, and many of their client's sites.",
+        ["Javascript", "HTML", "CSS", "PHP", "WordPress", "API"], "devicon-wordpress-plain", "http://www.rileydra.com"),
 
       new Project("Worship Better", "Website designed for church music leaders. Built with the team of Worship Resource Media using React.JS and Ruby on Rails.",
         ["Javascript", "Ruby on Rails", "React.JS", "Node.JS"], "devicon-rails-plain", "https://www.worshipbetter.com/"),
@@ -87,14 +84,14 @@ function AppViewModel() {
       new Project("GitHub Archive Challenge", "A submission for GitHub Archive Challenge written in Ruby.",
         ["Ruby"], "devicon-ruby-plain", "https://gist.github.com/B-Stewart/30e449f0c51f38248c90f1db3bd597ed"),
       
-    ]),
-
-    new Category("CMS", "cms", [
-
-      new Project("Swift Soul Interactive", "A Concrete5 based website to run my personal software distribution, updates, and developer blog.",
-        ["CMS", "Concrete5", "PHP"], "devicon-php-plain", "http://www.swiftsoulinteractive.com/"),
-      
     ])
+
+    // new Category("CMS", "cms", [
+
+    //   new Project("Swift Soul Interactive", "A Concrete5 based website to run my personal software distribution, updates, and developer blog.",
+    //     ["CMS", "Concrete5", "PHP"], "devicon-php-plain", "http://www.swiftsoulinteractive.com/"),
+      
+    // ])
   ];
 
   //Sort categories by alphabet

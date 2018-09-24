@@ -11,6 +11,18 @@
   .list-group { text-align: center; }
 }
 
+.absolute-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.absolute-link-wrapper {
+  position: relative;
+}
+
 body {
   max-width: 100vw;
   background-color: #ededed;
@@ -119,6 +131,7 @@ a.list-group-item {
 
 .panel-item {
   transition: background-color .2s linear, color .2s linear;
+  min-height: 220px;
 }
 
 .author {
